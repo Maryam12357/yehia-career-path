@@ -34,3 +34,38 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# Meet Yehia - Assignment 1
+
+*Name:* Maryam Daher
+
+## Project Description
+
+This project is a career journey website for Yehia, a Computer Science graduate from the Lebanese University, First Branch. It helps him organize his career plan, explore job opportunities, and track his applications.
+
+The project focuses on Next.js App Router, routing, dynamic routes, shared layouts, navigation, and local sample data.
+
+## How to Run Locally
+
+1. Install the dependencies:
+
+```bash
+npm install
+npm run dev 
+```
+
+Then open http://localhost:3000.
+
+## Explain Your Choices
+
+### 1. Why did you use await when reading params?
+
+I used await because params is a Promise in the current Next.js App Router. I need to wait for it to resolve before accessing the id from the URL. This lets me use the ID to find the correct opportunity.
+
+### 2. Why is the route ID a string?
+
+The route ID is a string because values coming from the URL are received as strings. For example, in /opportunities/1, the ID is "1", not the number 1. My opportunity data also uses string IDs, so they can be compared directly.
+
+### 3. What belongs in the dashboard layout, and what belongs in each dashboard page?
+
+The dashboard layout contains the shared navigation that appears on both dashboard pages, such as the Overview and Applications links. Each dashboard page contains its own specific content. The Overview page shows the application summary, while the Applications page shows the list of applications.
